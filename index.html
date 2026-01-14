@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payoo Banking</title>
+    <title>Login Form</title>
 
     <!-- Daisy UI connections -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -24,16 +24,17 @@
             <!-- Login Form -->
             <div class="hero-content">
                 <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                    <div class="card-body">
+                    <form class="card-body">
                         <fieldset class="fieldset">
                             <label class="label">Account Number</label>
-                            <input type="email" class="input" placeholder="AC***" />
+                            <input value="621511" id="account-number" required type="number" class="input"
+                                placeholder="AC***" />
                             <label class="label">Pin</label>
-                            <input type="text" class="input" placeholder="PIN" />
+                            <input id="pin" required type="text" class="input" placeholder="PIN" />
                             <div><a class="link link-hover">Forgot password?</a></div>
                             <button id="login-btn" class="btn btn-neutral mt-4">Login</button>
                         </fieldset>
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>
