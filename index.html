@@ -12,7 +12,36 @@
 </head>
 
 <body>
-    <h1>welcome to payoo banking</h1>
+    <main class=" bg-slate-800">
+        <section class=" max-w-md bg-gray-200 min-h-screen mx-auto p-6">
+            <div class="flex justify-center items-center mt-6">
+                <div class="flex justify-center items-center w-9/12 mt-10 relative">
+                    <img class=" absolute w-52" src="./assets/bg.png" alt="">
+                    <img class="w-16 mb-16" src="./assets/Group.png" alt="">
+                </div>
+            </div>
+
+            <!-- Login Form -->
+            <div class="hero-content">
+                <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <div class="card-body">
+                        <fieldset class="fieldset">
+                            <label class="label">Account Number</label>
+                            <input type="email" class="input" placeholder="AC***" />
+                            <label class="label">Pin</label>
+                            <input type="text" class="input" placeholder="PIN" />
+                            <div><a class="link link-hover">Forgot password?</a></div>
+                            <button id="login-btn" class="btn btn-neutral mt-4">Login</button>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Scripts File -->
+    <script src="./scripts/login.js"></script>
 </body>
 
 </html>
