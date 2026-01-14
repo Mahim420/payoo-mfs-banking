@@ -5,10 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payoo Banking</title>
+
+    <!-- Daisy UI connections -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font awsome cdn -->
+    <script src="https://kit.fontawesome.com/404f9860a3.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <h1>Main file</h1>
+<body class=" bg-slate-800">
+    <main class="max-w-md bg-gray-200 min-h-screen mx-auto p-6">
+        <header>
+            <nav class="flex items-center justify-around">
+                <img class="w-14" src="./assets/Group.png" alt="">
+                <div>
+                    <h4 class="font-bold text-xl">$45000</h4>
+                    <p class="text-stone-600">Available Balance</p>
+                </div>
+
+                <button class="btn text-stone-600">
+                    <span><i class="fa-solid rotate-180 fa-arrow-right-from-bracket"></i></span>
+                    <span>Log out</span>
+                </button>
+            </nav>
+        </header>
+    </main>
 </body>
 
 </html>
