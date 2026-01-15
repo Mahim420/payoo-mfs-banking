@@ -49,12 +49,3 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
     document.getElementById('amount').value = "";
 
 });
-
-
-// Logout button 
-
-document.getElementById('logout-btn').addEventListener('click', function () {
-
-    localStorage.clear();
-    window.location.href = './index.html';
-})

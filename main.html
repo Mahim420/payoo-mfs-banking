@@ -43,7 +43,7 @@
                     </div>
 
                     <div class="mt-7 grid grid-cols-3 gap-3">
-                        <div class="card cursor-pointer w-32 bg-gray-50 border border-stone-300">
+                        <div id="add-money" class="card cursor-pointer w-32 bg-gray-50 border border-stone-300">
                             <figure class="px-5 pt-5">
                                 <img src="./assets/wallet1.png" alt="Shoes" class="rounded-xl" />
                             </figure>
@@ -51,7 +51,7 @@
                                 <p class="text-stone-500">Add Money</p>
                             </div>
                         </div>
-                        <div class="card cursor-pointer w-32 bg-gray-50 border border-stone-300">
+                        <div id="cash-out" class="card cursor-pointer w-32 bg-gray-50 border border-stone-300">
                             <figure class="px-5 pt-5">
                                 <img src="./assets/send1.png" alt="Shoes" class="rounded-xl" />
                             </figure>
@@ -97,8 +97,8 @@
 
             <!-- Route sections -->
 
-            <section class="bg-white p-6">
-
+            <!-- Add money sections -->
+            <section id="add-money-section" class="bg-white p-6">
                 <h4 class="text-lg font-semibold">Add Money</h4>
 
                 <div class="mt-6">
@@ -137,11 +137,48 @@
                 </div>
 
             </section>
+
+
+            <!-- Deposit Sections -->
+            <section id="deposit-section" class="bg-white p-6">
+
+                <h4 class="text-lg font-semibold">Cash Out</h4>
+
+                <div class="mt-6">
+                    <div class="card bg-base-100 w-full rounded-3xl shrink-0 shadow-2xl">
+                        <div class="card-body">
+                            <fieldset class="fieldset">
+                                <label class="label font-bold text-sm">Agent Number</label>
+                                <input required id="agent-number" type="number"
+                                    class="bg-base-200 my-2 input w-full rounded-full"
+                                    placeholder="Enter 11 Digit account number" />
+
+                                <label class="label font-bold text-sm">Amount</label>
+                                <input required id="deposit-amount" type="number font-bold text-sm"
+                                    class="input bg-base-200 w-full my-2 rounded-full"
+                                    placeholder="Add Amount to withdraw" />
+
+                                <label class="label font-bold text-sm">Pin Number</label>
+                                <input id="deposit-pin" required type="password"
+                                    class="input mt-2 w-full rounded-full  bg-base-200 "
+                                    placeholder="Enter 4 digit pin number" />
+
+                                <button id="deposit-btn" class="btn rounded-full btn-primary mt-4">Withdraw
+                                    Money</button>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
         </div>
     </main>
 
     <!-- Scripts File -->
-    <script src="./scripts/main.js"></script>
+    <script src="./scripts/addMoney.js"></script>
+    <script src="./scripts/deposit.js"></script>
+    <script src="./scripts/toggle.js"></script>
+    <script src="./scripts/logout.js"></script>
 </body>
 
 </html>

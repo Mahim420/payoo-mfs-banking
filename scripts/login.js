@@ -6,7 +6,7 @@ document.getElementById('login-btn').addEventListener('click', function (event) 
     const pinNumber = document.getElementById('pin').value;
 
     if (accountNumber.length === 6) {
-        if (pinNumber) {
+        if (pinNumber === "1234") {
             localStorage.setItem('accountNumber', accountNumber);
             localStorage.setItem('pinNumber', pinNumber);
             window.location.href = "./main.html"
