@@ -21,11 +21,11 @@
                 <nav class="flex items-center justify-around">
                     <img class="w-14" src="./assets/Group.png" alt="">
                     <div>
-                        <h4 class="font-bold text-xl">$45000</h4>
+                        <h4 class="font-bold text-xl">$ <span id="main-balance">500</span></h4>
                         <p class="text-stone-600">Available Balance</p>
                     </div>
 
-                    <button class="btn text-stone-600">
+                    <button id="logout-btn" class="btn text-stone-600">
                         <span><i class="fa-solid rotate-180 fa-arrow-right-from-bracket"></i></span>
                         <span>Log out</span>
                     </button>
@@ -116,19 +116,21 @@
 
 
                                 <label class="label font-bold text-sm">Bank Account Number</label>
-                                <input type="number" class="bg-base-200 my-2 input w-full rounded-full"
+                                <input required id="account-number" type="number"
+                                    class="bg-base-200 my-2 input w-full rounded-full"
                                     placeholder="Enter 11 Digit account number" />
 
                                 <label class="label font-bold text-sm">Amount to Add</label>
-                                <input type="number font-bold text-sm"
+                                <input required id="amount" type="number font-bold text-sm"
                                     class="input bg-base-200 w-full my-2 rounded-full"
                                     placeholder="Add Amount to withdraw" />
 
                                 <label class="label font-bold text-sm">Pin Number</label>
-                                <input type="text" class="input mt-2 w-full rounded-full  bg-base-200 "
+                                <input id="pin" required type="password"
+                                    class="input mt-2 w-full rounded-full  bg-base-200 "
                                     placeholder="Enter 4 digit pin number" />
 
-                                <button class="btn rounded-full btn-primary mt-4">Add Money</button>
+                                <button id="add-money-btn" class="btn rounded-full btn-primary mt-4">Add Money</button>
                             </fieldset>
                         </div>
                     </div>
@@ -137,6 +139,9 @@
             </section>
         </div>
     </main>
+
+    <!-- Scripts File -->
+    <script src="./scripts/main.js"></script>
 </body>
 
 </html>
