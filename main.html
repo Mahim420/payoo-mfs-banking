@@ -105,32 +105,34 @@
                     <div class="card bg-base-100 w-full rounded-3xl shrink-0 shadow-2xl">
                         <div class="card-body">
                             <fieldset class="fieldset">
-                                <legend class="label font-bold text-sm">Select A Bank</legend>
-                                <select id="bank-select" class="select my-2 bg-base-200 w-full rounded-full"
-                                    aria-label="Select A Bank">
-                                    <option value="bkash" selected>Bkash</option>
-                                    <option value="ngad">NGAD</option>
-                                    <option value="dbbl">DBBL</option>
-                                </select>
+                                <form>
+                                    <legend class="label font-bold text-sm">Select A Bank</legend>
+                                    <select id="bank-select" class="select my-2 bg-base-200 w-full rounded-full"
+                                        aria-label="Select A Bank">
+                                        <option value="bkash" selected>Bkash</option>
+                                        <option value="ngad">NGAD</option>
+                                        <option value="dbbl">DBBL</option>
+                                    </select>
 
 
 
-                                <label class="label font-bold text-sm">Bank Account Number</label>
-                                <input required id="account-number" type="number"
-                                    class="bg-base-200 my-2 input w-full rounded-full"
-                                    placeholder="Enter 11 Digit account number" />
+                                    <label class="label font-bold text-sm">Bank Account Number</label>
+                                    <input required id="account-number" type="number"
+                                        class="bg-base-200 my-2 input w-full rounded-full"
+                                        placeholder="Enter 11 Digit account number" />
 
-                                <label class="label font-bold text-sm">Amount to Add</label>
-                                <input required id="amount" type="number font-bold text-sm"
-                                    class="input bg-base-200 w-full my-2 rounded-full"
-                                    placeholder="Add Amount to withdraw" />
+                                    <label class="label font-bold text-sm">Amount to Add</label>
+                                    <input required id="amount" type="number font-bold text-sm"
+                                        class="input bg-base-200 w-full my-2 rounded-full"
+                                        placeholder="Add Amount to withdraw" />
 
-                                <label class="label font-bold text-sm">Pin Number</label>
-                                <input id="pin" required type="password"
-                                    class="input mt-2 w-full rounded-full  bg-base-200 "
-                                    placeholder="Enter 4 digit pin number" />
-
-                                <button id="add-money-btn" class="btn rounded-full btn-primary mt-4">Add Money</button>
+                                    <label class="label font-bold text-sm">Pin Number</label>
+                                    <input id="pin" required type="password"
+                                        class="input mt-2 w-full rounded-full  bg-base-200 "
+                                        placeholder="Enter 4 digit pin number" />
+                                    <button id="add-money-btn" class="btn rounded-full btn-primary mt-4">Add
+                                        Money</button>
+                                </form>
                             </fieldset>
                         </div>
                     </div>
@@ -149,7 +151,7 @@
                         <div class="card-body">
                             <fieldset class="fieldset">
                                 <label class="label font-bold text-sm">Agent Number</label>
-                                <input required id="agent-number" type="number"
+                                <input value="621511" required id="agent-number" type="number"
                                     class="bg-base-200 my-2 input w-full rounded-full"
                                     placeholder="Enter 11 Digit account number" />
 
@@ -159,7 +161,7 @@
                                     placeholder="Add Amount to withdraw" />
 
                                 <label class="label font-bold text-sm">Pin Number</label>
-                                <input id="deposit-pin" required type="password"
+                                <input value="1234" id="deposit-pin" required type="password"
                                     class="input mt-2 w-full rounded-full  bg-base-200 "
                                     placeholder="Enter 4 digit pin number" />
 
@@ -175,8 +177,9 @@
     </main>
 
     <!-- Scripts File -->
-    <script src="./scripts/addMoney.js"></script>
+    <script src="./utilites/utility.js"></script>
     <script src="./scripts/deposit.js"></script>
+    <script src="./scripts/addMoney.js"></script>
     <script src="./scripts/toggle.js"></script>
     <script src="./scripts/logout.js"></script>
 </body>

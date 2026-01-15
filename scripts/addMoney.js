@@ -35,17 +35,19 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
     }
 
 
-    const userAmount = document.getElementById('amount').value;
-    const mainBalance = document.getElementById('main-balance').innerText;
+    const userAmount = getValueById("amount");
+    const mainBalance = getInnerTextById("main-balance")
 
-    const convertedUserAmount = parseFloat(userAmount);
-    const convertedMainBalance = parseFloat(mainBalance);
+    if (isNaN(userAmount) || userAmount <= 0) {
+        alert("Please enter a valid amount");
+        document.getElementById('amount').value = "";
+        return;
+    }
 
-    const totalAmount = convertedMainBalance + convertedUserAmount;
-    alert("Are you sure want to add ?");
-
-    document.getElementById('main-balance').innerText = totalAmount;
-
-    document.getElementById('amount').value = "";
+    else {
+        const totalAmount = userAmount + mainBalance;
+        setElement("main-balance", totalAmount)
+        document.getElementById('amount').value = "";
+    }
 
 });

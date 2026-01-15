@@ -1,11 +1,16 @@
 document.getElementById('deposit-section').style.display = "none";
 
 document.getElementById('add-money').addEventListener('click', function () {
-    document.getElementById('add-money-section').style.display = "block";
-    document.getElementById('deposit-section').style.display = "none";
+    toggleHandler("add-money-section", "block");
+    toggleHandler("deposit-section", "none");
 });
 
 document.getElementById('cash-out').addEventListener('click', function () {
-    document.getElementById('add-money-section').style.display = "none";
-    document.getElementById('deposit-section').style.display = "block";
+    toggleHandler("add-money-section", "none");
+    toggleHandler("deposit-section", "block");
 });
+
+
+function toggleHandler(id, status) {
+    document.getElementById(id).style.display = status;
+}

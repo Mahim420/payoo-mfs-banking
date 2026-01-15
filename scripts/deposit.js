@@ -16,21 +16,17 @@ document.getElementById('deposit-btn').addEventListener('click', function () {
         return;
     }
 
-    const depositAmount = document.getElementById('deposit-amount').value;
-    const convertedDepositAmount = parseFloat(depositAmount);
+    const depositAmount = getValueById("deposit-amount");
+    const mainBalance = getInnerTextById("main-balance");
 
-    const mainBalance = document.getElementById('main-balance').innerText;
-    const convertedMainBalance = parseFloat(mainBalance);
-
-    const totalAmount = convertedMainBalance - convertedDepositAmount;
-
-    if (totalAmount < 0) {
-        alert("Balance is Too low");
+    if (mainBalance >= depositAmount) {
+        const totalBalance = mainBalance - depositAmount;
+        setElement("main-balance", totalBalance)
+        document.getElementById('deposit-amount').value = "";
     }
     else {
-        alert("Are you sure to Deposit ??");
-        document.getElementById('main-balance').innerText = totalAmount;
+        alert("Your Balance Is low Check Your main Balance");
+        document.getElementById('deposit-amount').value = "";
     }
 
-    document.getElementById('deposit-amount').value = "";
 });
